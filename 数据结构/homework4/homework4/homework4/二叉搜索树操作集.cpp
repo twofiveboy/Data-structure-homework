@@ -1,6 +1,7 @@
 #include"pch.h"
-#include <stdio.h>
-#include <stdlib.h>
+#include<iostream>
+#include<cstdio>
+#include <cstdlib>
 
 typedef int ElementType;
 typedef struct TNode *Position;
@@ -55,6 +56,7 @@ int main()
 
 	return 0;
 }
+
 BinTree Insert(BinTree BST, ElementType X)
 {
 	if (!BST)
@@ -77,32 +79,28 @@ BinTree Insert(BinTree BST, ElementType X)
 }
 BinTree Delete(BinTree BST, ElementType X)
 {
-	if (!BST)
-		printf("Not Found\n");
-	else if (X < BST->Data)
-		BST->Left = Delete(BST->Left, X);
-	else if (X > BST->Data)
-		BST->Right = Delete(BST->Right, X);
-	else    //找到该节点
+	if (!BST) printf("Not Found\n");
+	else
 	{
-		if (BST->Left && BST->Right)
-		{
-			BinTree temp = FindMax(BST->Left);//此处找的是左子树的最大值
-			BST->Data = temp->Data;
-			BST->Left = Delete(BST->Left, BST->Data);
-		}
-		else
-		{
-
-			if (!BST->Left&& BST->Right)
-				BST = BST->Right;
-			else if (!BST->Right && BST->Left)
-				BST = BST->Left;
-			else return NULL;
-
+		if (X < BST->Data)BST->Left = Delete(BST->Left, X);
+		else if (X > BST->Data)BST->Right = Delete(BST->Right, X);
+		else {
+			if (BST->Left&&BST->Right)
+			{
+				BinTree tmp;
+				tmp = FindMax(BST->Left);
+				BST->Data = tmp->Data;
+				BST->Left = Delete(BST->Left, tmp->Data);
+			}
+			else
+			{
+				BinTree tmp = BST;
+				if (!BST->Left) BST = BST->Right;
+				else BST = BST->Left;
+				free(tmp);
+			}
 		}
 	}
-
 	return BST;
 }
 Position Find(BinTree BST, ElementType X)
