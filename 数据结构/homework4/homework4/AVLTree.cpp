@@ -12,7 +12,7 @@ struct Treenode
 	Treenode() :lson(NULL), rson(NULL) {}*/
 
 };
-int getHeight(Tree T)      //规定空树高度为1
+int getHeight(Tree T)      //规定空树高度为-1
 {
 	if (!T) return -1;
 	return T->height;
@@ -66,23 +66,25 @@ Tree Insert(int v, Tree T)
 		T->height = 0;
 		return T;
 	}
-	if (v < T->value) {
-		T->lson = Insert(v, T->lson);
-		if (!isBalanced(T->lson, T->rson)) {
-			if (v < T->lson->value)
-				T = LLrotate(T);
-			else
-				T = LRrotate(T);
+	else {
+		if (v < T->value) {
+			T->lson = Insert(v, T->lson);
+			if (!isBalanced(T->lson, T->rson)) {
+				if (v < T->lson->value)
+					T = LLrotate(T);
+				else
+					T = LRrotate(T);
+			}
 		}
-	}
-	else
-	{
-		T->rson = Insert(v, T->rson);
-		if (!isBalanced(T->lson, T->rson)) {
-			if (v > T->rson->value)
-				T = RRrotate(T);
-			else
-				T = RLrotate(T);
+		else
+		{
+			T->rson = Insert(v, T->rson);
+			if (!isBalanced(T->lson, T->rson)) {
+				if (v > T->rson->value)
+					T = RRrotate(T);
+				else
+					T = RLrotate(T);
+			}
 		}
 	}
 	T->height = Max(getHeight(T->lson), getHeight(T->rson)) + 1;
