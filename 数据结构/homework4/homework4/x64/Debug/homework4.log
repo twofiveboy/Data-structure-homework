@@ -1,0 +1,6 @@
+﻿  CBT.cpp
+d:\github\data-structure-homework\数据结构\homework4\homework4\cbt.cpp(25): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+d:\github\data-structure-homework\数据结构\homework4\homework4\cbt.cpp(26): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+d:\github\data-structure-homework\数据结构\homework4\homework4\cbt.cpp(27): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+d:\github\data-structure-homework\数据结构\homework4\homework4\cbt.cpp(28): warning C4244: “return”: 从“double”转换到“int”，可能丢失数据
+  homework4.vcxproj -> D:\GitHub\Data-structure-homework\数据结构\homework4\x64\Debug\homework4.exe
