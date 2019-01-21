@@ -1,7 +1,7 @@
 ﻿#include "pch.h"          //题目要求一个个插入。。。。而非先建堆再排序
 #include <iostream>
 #define maxsize 1000
-#define minData -10000;
+#define minData -10000
 using namespace std;
 struct Heap
 { 
@@ -28,9 +28,7 @@ void percUp(MinHeap H,int i)     //调整为最小堆
 	for (father = i; father <= H->size / 2; father = son) {
 		son = father * 2;
 		if ((son != H->size) && (H->Elements[son + 1] < H->Elements[son]))//有右儿子且比左儿子小
-		{
-			son++;
-		}
+		son++;
 		if (tmp <= H->Elements[son]) break;      //无需再调整
 		else H->Elements[father] = H->Elements[son];
 	}
