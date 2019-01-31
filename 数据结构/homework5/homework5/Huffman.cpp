@@ -1,4 +1,4 @@
-#include "pch.h"
+#include "pch.h"//参考https://blog.csdn.net/bobo1356/article/details/71699746
 #include<cstdlib>
 #include<string>
 #include <iostream>
@@ -104,15 +104,15 @@ int WPL(HuffmanTree T, int depth) {
 bool check(int N) {
 	bool judge = true;
 	int len1, len2;
-	for (int i = 1; i < N; i++) {
+	for (int i = 1; i < N; i++) {          //逐个将序列与其之后的序列做对比
 		string tmp;
 		len1 = codes[i].length();
 		for (int j = i + 1; j < N + 1; j++) {
 			len2 = codes[j].length();
-			if (len1 >= len2) {
-				tmp = codes[i].substr(0, len2);
-				if (tmp.compare(codes[j]) == 0) {
-					judge = false;
+			if (len1 >= len2) {              //前一个较大时，截取前一个序列的前len2个字符
+				tmp = codes[i].substr(0, len2);   
+				if (tmp.compare(codes[j]) == 0) {  //比较截取字符与后一个序列是否一致，一致时返回0
+					judge = false;                 //，说明是前一个序列后一个的前缀码
 					break;
 				}
 			}
