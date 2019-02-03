@@ -26,5 +26,11 @@
     <ClCompile Include="BinarySearch.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="MaxSub-easy.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MaxSub-hard.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
