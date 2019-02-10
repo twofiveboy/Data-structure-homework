@@ -23,7 +23,13 @@
     <ClCompile Include="pch.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="旅游规划.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
     <ClCompile Include="JamesBond-Hard.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Harry Porter.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
