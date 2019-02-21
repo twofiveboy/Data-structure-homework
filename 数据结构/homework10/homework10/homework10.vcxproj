@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{BD966656-A22C-44FB-B8E2-B39BD6355291}</ProjectGuid>
+    <ProjectGuid>{1C4D3EA7-472E-4DB3-AF9E-0F31898E5749}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>homework9</RootNamespace>
+    <RootNamespace>homework10</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -154,15 +154,15 @@
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Insert or Heap.cpp" />
-    <ClCompile Include="Insert or Merge.cpp" />
+    <ClCompile Include="PAT Judge.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="各种排序算法.cpp" />
+    <ClCompile Include="Sort with Swap.cpp" />
+    <ClCompile Include="统计工龄.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

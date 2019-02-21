@@ -23,13 +23,13 @@
     <ClCompile Include="pch.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Insert or Heap.cpp">
+    <ClCompile Include="Sort with Swap.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Insert or Merge.cpp">
+    <ClCompile Include="PAT Judge.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="各种排序算法.cpp">
+    <ClCompile Include="统计工龄.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
