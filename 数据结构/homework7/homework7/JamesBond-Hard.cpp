@@ -73,7 +73,7 @@ void BFS() {          //有些类似六度空间的BFS，但是要输出路径并考虑第一跳
 		}
 		else{
 			for (int i = 0; i < N; i++){
-				if (!Crocodiles[i].Visited&&jump(v, i)) {   //DFS还要加条件，是否能跳到
+				if (!Crocodiles[i].Visited&&jump(v, i)) {   //	BFS还要加条件，是否能跳到
 					Crocodiles[i].Visited = 1;
 					Q.push(i);
 					path[i] = v;
@@ -86,7 +86,6 @@ void BFS() {          //有些类似六度空间的BFS，但是要输出路径并考虑第一跳
 
 			}
 		}
-		if (Q.empty()) break; 
 		
 	}
 	cout << "0" << endl;//队列空了还未安全，007死定了
